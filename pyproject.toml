@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aind-ophys-decrosstalk-split-session-json-library"
-description = "Generated from aind-library-template"
+description = "Paired-plane lists for decrosstalk from a multiplane session JSON"
 license = "MIT"
 requires-python = ">=3.10"
 authors = [
@@ -17,6 +17,8 @@ readme = "README.md"
 version = "0.1.0"
 
 dependencies = [
+    "pydantic>=2.7",
+    "pydantic-settings>=2.8.1",
 ]
 
 [dependency-groups]
