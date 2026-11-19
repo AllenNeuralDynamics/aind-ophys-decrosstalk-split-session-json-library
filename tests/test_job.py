@@ -119,7 +119,7 @@ class TestPairV2Planes(unittest.TestCase):
         )
 
     def test_string_structure_and_uncoupled_plane(self) -> None:
-        """A bare structure name is used as is; uncoupled planes are skipped."""
+        """A bare structure name is kept; uncoupled planes are skipped."""
         uncoupled = {"plane_index": 2, "targeted_structure": "VISl"}
         planes = [_plane(0, 1, "VISl"), _plane(1, 0, "VISl"), uncoupled]
         acquisition = {
