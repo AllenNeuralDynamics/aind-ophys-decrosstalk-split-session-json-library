@@ -7,13 +7,14 @@ from pydantic_settings import BaseSettings
 
 
 class SplitSessionSettings(BaseSettings, cli_parse_args=True):
-    """Settings for writing paired-plane lists from a session JSON."""
+    """Settings for writing paired-plane lists from session metadata."""
 
     input_dir: Path = Field(
         default=Path("../data/"),
         description=(
-            "Directory containing session.json (directly or one level "
-            "down) and the per-plane motion-correction directories."
+            "Directory containing acquisition.json or session.json "
+            "(directly or one level down) and the per-plane "
+            "motion-correction directories."
         ),
     )
     output_dir: Path = Field(
